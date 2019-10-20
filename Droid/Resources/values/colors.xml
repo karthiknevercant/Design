@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#11316B</color>
+    <color name="primaryDark">#11316B</color>
+    <color name="accent">#11316Be</color>
+  <!--  <color name="window_background">#F5F5F5</color> -->
+
+      <color name="appDarkColor">#11316B</color>
+      <color name="appLiteColor">#ECEFF1</color>
+
+  <color name="loginbgColor">#E3E5E4</color>
+  
+</resources>
