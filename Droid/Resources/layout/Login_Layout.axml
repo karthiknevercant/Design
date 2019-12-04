@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+<<<<<<< Updated upstream
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
@@ -66,4 +67,93 @@
 			android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/ll_id"/>
 	
+=======
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/loginbgColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:id="@+id/ll_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="53dp"
+            android:paddingRight="53dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+                android:id="@+id/login_title_tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textColor="@color/appDarkColor"
+                android:textSize="@dimen/title_text_size"
+                android:layout_gravity="center" />
+        <EditText
+                android:id="@+id/username_edt_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_box_height_size"
+                android:textSize="@dimen/text_box_text_size"
+                android:hint="@string/username_hint"
+                android:layout_marginTop="20dp" />
+        <EditText
+                android:id="@+id/password_edt_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_box_height_size"
+                android:textSize="@dimen/text_box_text_size"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:layout_marginTop="15dp"/>
+        <Button
+                android:id="@+id/login_btn_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_size"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_user_text"
+            android:textSize="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/register_btn"
+            app:layout_constraintTop_toBottomOf="@id/ll_id"/>
+    <Button
+            android:id="@+id/register_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_size"
+            android:text="@string/register_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_text_size"
+            android:textAllCaps="false"
+            android:background="@drawable/button_bg"
+            app:layout_constraintLeft_toLeftOf="@id/ll_id"
+            app:layout_constraintTop_toBottomOf="@+id/ll_id"
+            android:layout_marginLeft="53dp"
+            android:layout_marginRight="53dp"
+           android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/forgot_pswd_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password_text"
+        android:textSize="@dimen/text_box_text_size"
+        android:textColor="@android:color/holo_red_dark"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/register_btn_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"/>
+
+>>>>>>> Stashed changes
 </android.support.constraint.ConstraintLayout>

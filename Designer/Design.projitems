@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -40,4 +41,48 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Modules\" />
   </ItemGroup>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{2BD450CE-FFCF-4B40-81F1-9BCAB8A9B3B5}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Designer</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Command.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ServiceLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebServiceProvider\APIServiceProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebServiceProvider\NetworkConnectivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebServiceProvider\DTO\ResponseBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebServiceProvider\DTO\UserDTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebServiceProvider\Handlers\UserHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Session\SessionHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RegisterUserViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\User\ForgotPassword\ForgotPasswordModelImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\User\Login\LoginViewModelImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\View.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)WebServiceProvider\.DS_Store" />
+    <None Include="$(MSBuildThisFileDirectory)Modules\User\Login\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Modules\" />
+  </ItemGroup>
+>>>>>>> Stashed changes
 </Project>

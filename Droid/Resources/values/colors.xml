@@ -1,10 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< Updated upstream
     <color name="primary">#263238</color>
     <color name="primaryDark">#1976D2</color>
     <color name="accent">#96d1ff</color>
     <color name="window_background">#F5F5F5</color>
+=======
+    <color name="primary">@color/appDarkColor</color>
+    <color name="primaryDark">@color/appDarkColor</color>
+    <color name="accent">@color/appDarkColor</color>
+  <!--  <color name="window_background">#F5F5F5</color> -->
+>>>>>>> Stashed changes
 
       <color name="appDarkColor">#263238</color>
       <color name="appLiteColor">#ECEFF1</color>
+<<<<<<< Updated upstream
 </resources>
+=======
+
+  <color name="loginbgColor">#E3E5E4</color>
+  
+</resources>
+>>>>>>> Stashed changes

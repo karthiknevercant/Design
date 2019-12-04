@@ -1,33 +1,32 @@
-﻿using Android.App;
-<<<<<<< Updated upstream
-using Android.OS;
-=======
-using Android.Content;
-using Android.Graphics;
-using Android.OS;
-using Android.Support.V7.App;
-using Android.Widget;
-using Designer.Droid;
->>>>>>> Stashed changes
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Design.Droid.Activities
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Design.Droid;
+
+namespace Designer.Droid.Activities
 {
-    [Activity(Label = "LoginActivity", MainLauncher = true)]
-    public class LoginActivity : Activity
+    [Activity(Label = "FogortPasswordActivity")]
+    public class FogortPasswordActivity : BaseActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Views
-            TextView loginTitleTv, forgotPasswordTv;
+            TextView forgotTitleTv, forgotPasswordTv;
             EditText usernameEdt, passwordEdt;
             Button loginBtn, registerBtn;
 
             // Create your application here
             SetContentView(Resource.Layout.Login_Layout);
-<<<<<<< Updated upstream
-=======
 
             // Find View By Id's
             loginTitleTv = FindViewById<TextView>(Resource.Id.login_title_tv_id);
@@ -44,22 +43,6 @@ namespace Design.Droid.Activities
             //loginBtn.SetTypeface(BaseActivity.BOLD, TypefaceStyle.Normal);
             //registerBtn.SetTypeface(BaseActivity.BOLD, TypefaceStyle.Normal);
             //forgotPasswordTv.SetTypeface(BaseActivity.BOLD, TypefaceStyle.Normal);
-
-            registerBtn.Click += delegate {
-                NavigateToRegisterationScreen();
-            };
-        }
-
-        public void SetFonts()
-        {
-            
-        }
-
-        public void NavigateToRegisterationScreen()
-        {
-            Intent intent = new Intent(this, typeof(RegisterUserActivity));
-            StartActivity(intent);
->>>>>>> Stashed changes
         }
     }
 }

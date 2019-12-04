@@ -1,11 +1,24 @@
-﻿using Android.OS;
+﻿using Android.Graphics;
+using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
+<<<<<<< Updated upstream
+=======
+using Designer.Droid;
+using Design.Constant;
+using Android.App;
+>>>>>>> Stashed changes
 
 namespace Design.Droid
 {
     public class BaseActivity : AppCompatActivity
     {
+        // Fonts
+        public static Typeface BOLD = Typeface.CreateFromAsset(Application.Context.Assets, Constants.FONT_PATH_BOLD);
+
+        //public static Typeface MEDIUM = Typeface.CreateFromAsset(Application.Context.Assets, Constants.FONT_PATH_MEDIUM);
+        //public static Typeface REGULAR = Typeface.CreateFromAsset(Application.Context.Assets, Constants.FONT_PATH_REGULAR);
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
