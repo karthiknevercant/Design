@@ -94,6 +94,13 @@
     <Reference Include="Plugin.Connectivity">
       <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
     </Reference>
+    <Reference Include="Toast">
+      <HintPath>..\packages\Toast.iOS.1.2.0\lib\xamarinios10\Toast.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -138,30 +145,106 @@
     <ImageAsset Include="Assets.xcassets\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\back_icon.imageset\icons8-left-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\eye_open_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\eye_open_icon.imageset\icons8-eye-90.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\location_icon.imageset\icons8-place-marker-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\location_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\apple_black_icon.imageset\icons8-apple-logo-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\apple_black_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fb_icon.imageset\icons8-facebook-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fb_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\google_icon.imageset\icons8-google-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\google_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\apple_icon.imageset\icons8-apple-logo-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\apple_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\home_active_icon.imageset\icons8-home-page-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\home_active_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\search_icon.imageset\icons8-search-50.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\search_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\favourite_inactive_icon.imageset\icons8-heart-outline-96 %281%29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\favourite_inactive_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\my_orders_inactive_icon.imageset\icons8-purchase-order-96 %283%29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\my_orders_inactive_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\profile_inactive_icon.imageset\icons8-user-60 %281%29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\profile_inactive_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\my_orders_active_icon.imageset\icons8-purchase-order-96 %282%29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\my_orders_active_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\home_inactive_icon.imageset\icons8-home-page-100 %281%29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\home_inactive_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\favourite_active_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\favourite_active_icon.imageset\icons8-heart-outline-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\profile_active_icon.imageset\icons8-user-60.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\profile_active_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\cart_icon.imageset\icons8-fast-cart-96.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\cart_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\search_icon.imageset\icons8-search-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\close_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\close_icon.imageset\icons8-multiply-52.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_icon.imageset\icons8-heart-50.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_icon.imageset\icons8-heart-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_fill_icon.imageset\icons8-heart-50.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_fill_icon.imageset\icons8-heart-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\heart_fill_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\success_tick_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\success_tick_icon.imageset\icons8-double-tick-100.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\avatar_icon.imageset\Avatar-PNG-Picture.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\avatar_icon.imageset\Avatar-PNG-Picture-2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\avatar_icon.imageset\Avatar-PNG-Picture-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\avatar_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\app_brand_image_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\download.jpeg" />
+    <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\download-2.jpeg" />
+    <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\download-1.jpeg" />
+    <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewControllers\DetailViewControllers\BrowseItemDetailViewController.cs" />
-    <Compile Include="ViewControllers\DetailViewControllers\BrowseItemDetailViewController.designer.cs">
-      <DependentUpon>BrowseItemDetailViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\AboutViewController.cs" />
-    <Compile Include="ViewControllers\AboutViewController.designer.cs">
-      <DependentUpon>AboutViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\BrowseViewController.cs" />
-    <Compile Include="ViewControllers\BrowseViewController.designer.cs">
-      <DependentUpon>BrowseViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\ItemNewViewController.cs" />
-    <Compile Include="ViewControllers\ItemNewViewController.designer.cs">
-      <DependentUpon>ItemNewViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\TabBarController.cs" />
-    <Compile Include="ViewControllers\TabBarController.designer.cs">
-      <DependentUpon>TabBarController.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Xibs\ProductCollectionViewCell.cs" />
+    <Compile Include="Xibs\ProductCollectionViewCell.designer.cs">
+      <DependentUpon>ProductCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\ProductSource.cs" />
+    <Compile Include="Common\ConstantIOS.cs" />
+    <Compile Include="Modules\BaseViewController.cs" />
+    <Compile Include="Modules\BaseViewController.designer.cs">
+      <DependentUpon>BaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ForgotPaswordController.cs" />
+    <Compile Include="Modules\ForgotPaswordController.designer.cs">
+      <DependentUpon>ForgotPaswordController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CreateAccountViewController.cs" />
+    <Compile Include="Modules\CreateAccountViewController.designer.cs">
+      <DependentUpon>CreateAccountViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HomeTabbarController.cs" />
+    <Compile Include="Modules\HomeTabbarController.designer.cs">
+      <DependentUpon>HomeTabbarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProductDetailViewController.cs" />
+    <Compile Include="Modules\ProductDetailViewController.designer.cs">
+      <DependentUpon>ProductDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProductsViewController.cs" />
+    <Compile Include="Modules\ProductsViewController.designer.cs">
+      <DependentUpon>ProductsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xibs\SizeCollectionViewCell.cs" />
+    <Compile Include="Xibs\SizeCollectionViewCell.designer.cs">
+      <DependentUpon>SizeCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LoginViewController.cs" />
+    <Compile Include="Modules\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OrderSuccessMsgViewController.cs" />
+    <Compile Include="Modules\OrderSuccessMsgViewController.designer.cs">
+      <DependentUpon>OrderSuccessMsgViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -171,6 +254,17 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Storyboards\User.storyboard" />
+    <InterfaceDefinition Include="BaseViewController.xib" />
+    <InterfaceDefinition Include="Xibs\ProductCollectionViewCell.xib" />
+    <InterfaceDefinition Include="Xibs\SizeCollectionViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Storyboards\" />
+    <Folder Include="Xibs\" />
+    <Folder Include="Sources\" />
+    <Folder Include="Common\" />
+    <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

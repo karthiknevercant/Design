@@ -18,10 +18,7 @@ namespace Design.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            App.Initialize();
-
-
-
+            //App.Initialize();
             return true;
         }
 

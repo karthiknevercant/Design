@@ -2,13 +2,9 @@
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
-<<<<<<< Updated upstream
-=======
 using Designer.Droid;
 using Design.Constant;
 using Android.App;
->>>>>>> Stashed changes
-
 namespace Design.Droid
 {
     public class BaseActivity : AppCompatActivity
