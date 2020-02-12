@@ -25,7 +25,7 @@ namespace Designer.iOS.Storyboards
         // HEART IMAGE CLIKED ACTION
         void FavouriteImageCliked()
         {
-            if ()
+            //if ()
         }
     }
 }

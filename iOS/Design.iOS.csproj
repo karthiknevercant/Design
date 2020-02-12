@@ -72,6 +72,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -101,6 +102,12 @@
       <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK-1.0" />
+    <Reference Include="MaterialComponents">
+      <HintPath>..\packages\Xamarin.iOS.MaterialComponents.72.2.0.1\lib\Xamarin.iOS\MaterialComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Lottie.iOS">
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.10\lib\xamarinios10\Lottie.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -199,6 +206,10 @@
     <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\download-2.jpeg" />
     <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\download-1.jpeg" />
     <ImageAsset Include="Resources\Assets.xcassets\shirt_sample_icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\add.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\add.imageset\icons8-plus-math-16.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add.imageset\icons8-plus-math-30.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add.imageset\icons8-plus-math-40.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -245,6 +256,11 @@
     <Compile Include="Modules\OrderSuccessMsgViewController.designer.cs">
       <DependentUpon>OrderSuccessMsgViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Animation.cs" />
+    <Compile Include="Modules\ProfileViewController.cs" />
+    <Compile Include="Modules\ProfileViewController.designer.cs">
+      <DependentUpon>ProfileViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -265,6 +281,8 @@
     <Folder Include="Sources\" />
     <Folder Include="Common\" />
     <Folder Include="Modules\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Resources\Assets.xcassets\add.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

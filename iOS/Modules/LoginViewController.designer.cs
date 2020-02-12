@@ -20,6 +20,10 @@ namespace Designer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView contentBaseView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton createAccountBtn { get; set; }
 
         [Outlet]
@@ -59,6 +63,11 @@ namespace Designer.iOS
             if (appleSignInBtn != null) {
                 appleSignInBtn.Dispose ();
                 appleSignInBtn = null;
+            }
+
+            if (contentBaseView != null) {
+                contentBaseView.Dispose ();
+                contentBaseView = null;
             }
 
             if (createAccountBtn != null) {

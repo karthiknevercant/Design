@@ -28,6 +28,7 @@ namespace Designer.iOS.Sources
         {
             var tabCell = (ProductCollectionViewCell)collectionView.DequeueReusableCell(CellIDS.PRODUCT_CELL, indexPath);
 
+            var attrs = new UICollectionViewLayoutAttributes();
             //var tabTitle = tabTitles[indexPath.Row];
 
             //if (indexPath.Row == selectedTabIndex)
@@ -91,6 +92,21 @@ namespace Designer.iOS.Sources
 
             //iTab.OnTabChange(indexPath);
 
+        }
+
+
+    }
+
+    public class SpacingFlowLayout : UICollectionViewFlowLayout
+    {
+        public SpacingFlowLayout()
+        {
+
+        }
+
+        public override CGPoint TargetContentOffset(CGPoint proposedContentOffset, CGPoint scrollingVelocity)
+        {
+            return new CGPoint(proposedContentOffset.X + 50, proposedContentOffset.Y);
         }
     }
 

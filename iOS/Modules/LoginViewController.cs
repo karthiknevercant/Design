@@ -1,3 +1,4 @@
+using Designer.iOS.Helper;
 using Foundation;
 using System;
 using System.Diagnostics;
@@ -58,10 +59,19 @@ namespace Designer.iOS
 
             loginBtn.TouchUpInside += delegate
             {
-                NavigateToHomeScreen();
+                Animation.Shrink(loginBtn, loginBtn.Frame.Height, 5);
+                //NavigateToHomeScreen();
             };
         }
 
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            Animation.Movement(usernameTextField, contentBaseView.Center.X, loginBtn.Center.Y);
+
+        }
         // HANDLING OUTSIDE TOUCH => HIDING KEYBOARD
         public void OutsideTap()
         {
