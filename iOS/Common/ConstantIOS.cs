@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Designer.iOS.Common
 {
-    public class ConstantsIOS
+    public static class ConstantsIOS
     {
         public const short PRODUCT_CELL_HEIGHT = 230;
     }

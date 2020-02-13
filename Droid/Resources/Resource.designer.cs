@@ -2586,91 +2586,82 @@ namespace Designer.Droid
 			public const int background_splash = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int button_bg = 2131230806;
+			public const int circle_background = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int circle_background = 2131230807;
+			public const int corner_radius_editext_15 = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int corner_radius_editext_15 = 2131230808;
+			public const int design_bottom_navigation_item_background = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int design_bottom_navigation_item_background = 2131230809;
+			public const int design_fab_background = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int design_fab_background = 2131230810;
+			public const int design_ic_visibility = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int design_ic_visibility = 2131230811;
+			public const int design_ic_visibility_off = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int design_ic_visibility_off = 2131230812;
+			public const int design_password_eye = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int design_password_eye = 2131230813;
+			public const int design_snackbar_background = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int design_snackbar_background = 2131230814;
+			public const int heroplaceholder = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int heroplaceholder = 2131230815;
+			public const int ic_save = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int ic_save = 2131230816;
+			public const int navigation_empty_icon = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int navigation_empty_icon = 2131230817;
+			public const int notification_action_background = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int notification_action_background = 2131230818;
+			public const int notification_bg = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int notification_bg = 2131230819;
+			public const int notification_bg_low = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int notification_bg_low = 2131230820;
+			public const int notification_bg_low_normal = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int notification_bg_low_normal = 2131230821;
+			public const int notification_bg_low_pressed = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int notification_bg_low_pressed = 2131230822;
+			public const int notification_bg_normal = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int notification_bg_normal = 2131230823;
+			public const int notification_bg_normal_pressed = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int notification_bg_normal_pressed = 2131230824;
+			public const int notification_icon_background = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int notification_icon_background = 2131230825;
+			public const int notification_template_icon_bg = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int notification_template_icon_bg = 2131230826;
+			public const int notification_template_icon_low_bg = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int notification_template_icon_low_bg = 2131230827;
+			public const int notification_tile_bg = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int notification_tile_bg = 2131230828;
+			public const int notify_panel_notification_icon_bg = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int notify_panel_notification_icon_bg = 2131230829;
+			public const int tooltip_frame_dark = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int spalsh_cloth_image = 2131230830;
+			public const int tooltip_frame_light = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int splash_cost_effective = 2131230831;
-			
-			// aapt resource value: 0x7F080070
-			public const int tooltip_frame_dark = 2131230832;
-			
-			// aapt resource value: 0x7F080071
-			public const int tooltip_frame_light = 2131230833;
-			
-			// aapt resource value: 0x7F080072
-			public const int xamarin_logo = 2131230834;
+			public const int xamarin_logo = 2131230831;
 			
 			static Drawable()
 			{
@@ -3594,19 +3585,16 @@ namespace Designer.Droid
 			public const int select_dialog_singlechoice_material = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int Splash_Layout = 2131427396;
+			public const int support_simple_spinner_dropdown_item = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int support_simple_spinner_dropdown_item = 2131427397;
+			public const int tabs = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int tabs = 2131427398;
+			public const int toolbar = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int toolbar = 2131427399;
-			
-			// aapt resource value: 0x7F0B0048
-			public const int tooltip = 2131427400;
+			public const int tooltip = 2131427399;
 			
 			static Layout()
 			{
@@ -3639,12 +3627,6 @@ namespace Designer.Droid
 			
 			// aapt resource value: 0x7F0D0000
 			public const int Icon = 2131558400;
-			
-			// aapt resource value: 0x7F0D0001
-			public const int ic_launcher = 2131558401;
-			
-			// aapt resource value: 0x7F0D0002
-			public const int spalsh_cloth_image = 2131558402;
 			
 			static Mipmap()
 			{

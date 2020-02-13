@@ -104,10 +104,10 @@ namespace Designer.iOS.Sources
 
         }
 
-        public override CGPoint TargetContentOffset(CGPoint proposedContentOffset, CGPoint scrollingVelocity)
-        {
-            return new CGPoint(proposedContentOffset.X + 50, proposedContentOffset.Y);
-        }
+        //public override CGPoint TargetContentOffset(CGPoint proposedContentOffset, CGPoint scrollingVelocity)
+        //{
+        //    return new CGPoint(proposedContentOffset.X + 50, proposedContentOffset.Y);
+        //}
     }
 
     public interface ITab

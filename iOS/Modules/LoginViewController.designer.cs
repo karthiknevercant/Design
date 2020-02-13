@@ -20,11 +20,11 @@ namespace Designer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView contentBaseView { get; set; }
+        UIKit.UIButton btnPassword { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton createAccountBtn { get; set; }
+        UIKit.UIView contentBaseView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -40,6 +40,10 @@ namespace Designer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblLogin { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton loginBtn { get; set; }
 
         [Outlet]
@@ -49,6 +53,18 @@ namespace Designer.iOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIScrollView scrollview { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton txtCreateAccount { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel txtOr { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel txtstaticCreateAccount { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -65,14 +81,14 @@ namespace Designer.iOS
                 appleSignInBtn = null;
             }
 
+            if (btnPassword != null) {
+                btnPassword.Dispose ();
+                btnPassword = null;
+            }
+
             if (contentBaseView != null) {
                 contentBaseView.Dispose ();
                 contentBaseView = null;
-            }
-
-            if (createAccountBtn != null) {
-                createAccountBtn.Dispose ();
-                createAccountBtn = null;
             }
 
             if (fbSignInBtn != null) {
@@ -90,6 +106,11 @@ namespace Designer.iOS
                 googleSignInBtn = null;
             }
 
+            if (lblLogin != null) {
+                lblLogin.Dispose ();
+                lblLogin = null;
+            }
+
             if (loginBtn != null) {
                 loginBtn.Dispose ();
                 loginBtn = null;
@@ -103,6 +124,21 @@ namespace Designer.iOS
             if (scrollview != null) {
                 scrollview.Dispose ();
                 scrollview = null;
+            }
+
+            if (txtCreateAccount != null) {
+                txtCreateAccount.Dispose ();
+                txtCreateAccount = null;
+            }
+
+            if (txtOr != null) {
+                txtOr.Dispose ();
+                txtOr = null;
+            }
+
+            if (txtstaticCreateAccount != null) {
+                txtstaticCreateAccount.Dispose ();
+                txtstaticCreateAccount = null;
             }
 
             if (usernameTextField != null) {

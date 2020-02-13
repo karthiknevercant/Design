@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreGraphics;
 using UIKit;
 
 namespace Designer.iOS.Helper
@@ -25,7 +26,7 @@ namespace Designer.iOS.Helper
             UIView.Animate(duration, delay
                 , options, () =>
                 {
-                    view.Frame = new CoreGraphics.CGRect(view.Frame.X, view.Frame.Y, 5, 5);
+                    view.Frame = new CoreGraphics.CGRect(view.Frame.X, view.Frame.Y, 15, 15);
                 }, () =>
                 {
                     if (action != null)
@@ -36,7 +37,7 @@ namespace Designer.iOS.Helper
         {
             var max = 1f;
             var min = 0f;
-
+            view.Alpha = isFade ? max : min;
             UIView.Animate(duration, delay, options,
                 () =>
                 {
@@ -47,6 +48,17 @@ namespace Designer.iOS.Helper
                     if (action != null)
                         action();
                 });
+        }
+
+
+        public static void AnimateWithSpring(UIView view, float springDampingRatio, float initialSpringVelocity, nfloat x, nfloat y, double duration = 0.3f, double delay = 0, Action action = null)
+        {
+
+            UIView.AnimateNotify(3.0, 0.0, (nfloat)springDampingRatio, (nfloat)initialSpringVelocity, 0, () =>
+            {
+                view.Center = new CGPoint(x, y);
+
+            }, null);
         }
     }
 }

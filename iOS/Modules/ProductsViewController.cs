@@ -45,7 +45,7 @@ namespace Designer.iOS.Storyboards
 
                 //famMembersCollectionview.Delegate = new AddMemberCollectionViewLayout();
 
-                var flowlayout = new SpacingFlowLayout();
+                var flowlayout = new UICollectionViewFlowLayout();
 
                 flowlayout.ItemSize = new CGSize((productCollectionView.Frame.Width / 2), ConstantsIOS.PRODUCT_CELL_HEIGHT);
 

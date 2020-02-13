@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using Xamarin;
 
 namespace Design.iOS
 {
@@ -19,6 +20,7 @@ namespace Design.iOS
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             //App.Initialize();
+            IQKeyboardManager.SharedManager.Enable = true;
             return true;
         }
 

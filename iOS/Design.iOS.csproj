@@ -108,6 +108,12 @@
     <Reference Include="Lottie.iOS">
       <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.10\lib\xamarinios10\Lottie.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="IQKeyboardManager">
+      <HintPath>..\packages\Xamarin.IQKeyboardManager.1.4.1\lib\Xamarin.iOS10\IQKeyboardManager.dll</HintPath>
+    </Reference>
+    <Reference Include="FloatLabeledEntry.iOS">
+      <HintPath>..\packages\FloatLabeledEntry.iOS.1.1.1\lib\Xamarin.iOS10\FloatLabeledEntry.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

@@ -1,3 +1,4 @@
+using Designer.iOS.Common;
 using Designer.iOS.Helper;
 using Foundation;
 using System;
@@ -12,6 +13,8 @@ namespace Designer.iOS
         public LoginViewController(IntPtr handle) : base(handle)
         {
         }
+
+        #region LifeCycle
 
         public override void ViewDidLoad()
         {
@@ -47,7 +50,7 @@ namespace Designer.iOS
             UITapGestureRecognizer outsideGesture = new UITapGestureRecognizer(OutsideTap);
             wholeView.AddGestureRecognizer(outsideGesture);
 
-            createAccountBtn.TouchUpInside += delegate
+            txtCreateAccount.TouchUpInside += delegate
             {
                 NavigateToCreateAccountScreen();
             };
@@ -60,18 +63,38 @@ namespace Designer.iOS
             loginBtn.TouchUpInside += delegate
             {
                 Animation.Shrink(loginBtn, loginBtn.Frame.Height, 5);
-                //NavigateToHomeScreen();
+                NavigateToHomeScreen();
             };
         }
-
 
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
 
-            Animation.Movement(usernameTextField, contentBaseView.Center.X, loginBtn.Center.Y);
+            AnimationForThisPage();
+        }
+
+        private void AnimationForThisPage()
+        {
+            Animation.Movement(usernameTextField, usernameTextField.Center.X - 200, usernameTextField.Center.Y);
+            Animation.Movement(passwordTextField, passwordTextField.Center.X - 200, passwordTextField.Center.Y);
+
+            Animation.AnimateWithSpring(appleSignInBtn, 0.4f, 2f, appleSignInBtn.Center.X, -200);
+            Animation.AnimateWithSpring(fbSignInBtn, 0.4f, 2f, fbSignInBtn.Center.X, -200);
+            Animation.AnimateWithSpring(googleSignInBtn, 0.4f, 2f, googleSignInBtn.Center.X, -200);
+            Animation.AnimateWithSpring(lblLogin, 0.4f, 2f, lblLogin.Center.X, 200);
+            Animation.Fade(txtOr, false, 3);
+            Animation.Fade(txtCreateAccount, false, 3);
+            Animation.Fade(txtstaticCreateAccount, false, 3);
+            Animation.Fade(forgotPasswordBtn, false, 3);
 
         }
+
+
+
+        #endregion
+
+        #region Methods
         // HANDLING OUTSIDE TOUCH => HIDING KEYBOARD
         public void OutsideTap()
         {
@@ -94,9 +117,7 @@ namespace Designer.iOS
         {
             try
             {
-                UIStoryboard patientStoryboard = UIStoryboard.FromName("User", null) as UIStoryboard;
-
-                CreateAccountViewController createAccountViewController = patientStoryboard.InstantiateViewController("CreateAccountViewController_ID", null) as CreateAccountViewController;
+                var createAccountViewController = Storyboard.InstantiateViewController("CreateAccountViewController_ID") as CreateAccountViewController;
 
                 this.NavigationController.PushViewController(createAccountViewController, true);
             }
@@ -111,9 +132,7 @@ namespace Designer.iOS
         {
             try
             {
-                UIStoryboard patientStoryboard = UIStoryboard.FromName("User", null) as UIStoryboard;
-
-                ForgotPaswordController forgotPaswordController = patientStoryboard.InstantiateViewController("ForgotPaswordController_ID", null) as ForgotPaswordController;
+                ForgotPaswordController forgotPaswordController = Storyboard.InstantiateViewController("ForgotPaswordController_ID", null) as ForgotPaswordController;
 
                 this.NavigationController.PushViewController(forgotPaswordController, true);
             }
@@ -126,15 +145,48 @@ namespace Designer.iOS
         // LOGIN SCREEN TO HOME TABS SCREEN NAVIGATION
         public void NavigateToHomeScreen()
         {
-            UINavigationController navigationController = NavigationController;
-
             NavigationController.PopViewController(false);
 
-            UIStoryboard patientStoryboard = UIStoryboard.FromName("User", null) as UIStoryboard;
+            var homeTabbarController = Storyboard.InstantiateViewController("HomeTabbarController_ID") as HomeTabbarController;
 
-            HomeTabbarController homeTabbarController = patientStoryboard.InstantiateViewController("HomeTabbarController_ID", null) as HomeTabbarController;
-
-            navigationController.PushViewController(homeTabbarController, true);
+            this.NavigationController.PushViewController(homeTabbarController, true);
         }
+
+        public void TopToBottomAnimation()
+        {
+            Animation.AnimateWithSpring(appleSignInBtn, 0.4f, 2f, appleSignInBtn.Center.X, 200);
+            Animation.AnimateWithSpring(fbSignInBtn, 0.4f, 2f, fbSignInBtn.Center.X, 200);
+            Animation.AnimateWithSpring(googleSignInBtn, 0.4f, 2f, googleSignInBtn.Center.X, 200);
+            Animation.AnimateWithSpring(lblLogin, 0.4f, 2f, lblLogin.Center.X, 200);
+            Animation.AnimateWithSpring(txtOr, 0.4f, 2f, txtOr.Center.X, 200);
+            Animation.AnimateWithSpring(txtCreateAccount, 0.4f, 2f, txtCreateAccount.Center.X, 200);
+            Animation.AnimateWithSpring(txtstaticCreateAccount, 0.4f, 2f, txtstaticCreateAccount.Center.X, 200);
+            Animation.AnimateWithSpring(forgotPasswordBtn, 0.4f, 2f, forgotPasswordBtn.Center.X, 200);
+            Animation.AnimateWithSpring(usernameTextField, 0.4f, 2f, usernameTextField.Center.X, 200);
+            Animation.AnimateWithSpring(passwordTextField, 0.4f, 2f, passwordTextField.Center.X, 200);
+            Animation.AnimateWithSpring(btnPassword, 0.4f, 2f, btnPassword.Center.X, 200);
+            Animation.AnimateWithSpring(loginBtn, 0.4f, 2f, loginBtn.Center.X, 200);
+
+        }
+
+        public void Fade()
+        {
+            Animation.Fade(lblLogin, false, 3);
+            Animation.Fade(txtOr, false, 3);
+            Animation.Fade(txtCreateAccount, false, 3);
+            Animation.Fade(txtstaticCreateAccount, false, 3);
+
+            Animation.Fade(txtOr, false, 3);
+            Animation.Fade(txtCreateAccount, false, 3);
+            Animation.Fade(txtstaticCreateAccount, false, 3);
+            Animation.Fade(forgotPasswordBtn, false, 3);
+        }
+
+        public void Movement()
+        {
+            Animation.Movement(usernameTextField, usernameTextField.Center.X - 200, usernameTextField.Center.Y);
+            Animation.Movement(passwordTextField, passwordTextField.Center.X - 200, passwordTextField.Center.Y);
+        }
+        #endregion
     }
 }
